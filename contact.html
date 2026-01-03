@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | PestilRotası</title>
+    <meta name="description" content="Bizimle iletişime geçin. Adres, telefon ve iletişim formu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="PestilRotası Logo" class="logo-img">
+                PestilRotası
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="products.html">Ürünler</a></li>
+                <li><a href="about.html">Hikayemiz</a></li>
+                <li><a href="contact.html" class="active">İletişim</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" aria-label="Sepet" onclick="window.location.href='cart.html'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="auth-actions">
+                    <!-- Auth links will be injected here -->
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menü">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header"
+        style="padding-top: 120px; padding-bottom: 40px; text-align: center; background-color: var(--color-bg);">
+        <div class="container">
+            <h1>İletişim</h1>
+            <p>Sorularınız ve siparişleriniz için bize ulaşın.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 style="margin-bottom: 1.5rem;">Bize Ulaşın</h2>
+                <div class="info-item" style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">Adres</h3>
+                    <p>Gümüşhane Merkez, Pestil Caddesi No: 29</p>
+                </div>
+                <div class="info-item" style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">Telefon</h3>
+                    <p><a href="tel:+904561234567">+90 456 123 45 67</a></p>
+                </div>
+                <div class="info-item">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">E-posta</h3>
+                    <p><a href="mailto:info@pestilrotasi.com">info@pestilrotasi.com</a></p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper"
+                style="background: white; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                <h3 style="margin-bottom: 1.5rem;">Mesaj Gönderin</h3>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Mesajınız alındı!');">
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Adınız
+                            Soyadınız</label>
+                        <input type="text" id="name" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: var(--radius-sm);">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">E-posta
+                            Adresiniz</label>
+                        <input type="email" id="email" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: var(--radius-sm);">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="message"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Mesajınız</label>
+                        <textarea id="message" rows="4" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: var(--radius-sm);"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>PestilRotası</h3>
+                <p>Doğal lezzetlerin adresi.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Hızlı Erişim</h4>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="products.html">Ürünler</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                    <li><a href="shipping.html">Kargo ve Teslimat</a></li>
+                    <li><a href="returns.html">İade ve Değişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Takip Edin</h4>
+                <div class="social-icons" style="display: flex; gap: 1rem;">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PestilRotası. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+
+</html>
